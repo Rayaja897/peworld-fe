@@ -1,19 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import "./index.scss";
 @import "./variables.scss";
 
-h1{
-    font-size: 44px;
-    font-weight: 500;
-    color: $text-dark;
+h1 {
+  font-size: 44px;
+  font-weight: 500;
+  color: $text-dark;
+  font-family: "Poppins", sans-serif;
 }
 
-h2{
-    font-size: 36px;
-    font-weight: 500;
-    color: $text-dark;
+h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: $text-dark;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
 }
 
 .btn-primary {
@@ -24,30 +32,30 @@ h2{
 }
 
 .btn-white {
-    color: $primary;
-    background-color: #fff;
-    padding: 5px 15px;
-    font-weight: 500;
-  }
+  color: $primary;
+  background-color: #fff;
+  padding: 5px 15px;
+  font-weight: 500;
+}
 
 .btn-lg {
-    padding: 10px 25px;
+  padding: 10px 25px;
 }
 
 .btn-outline-primary {
-    color: $text-primary;
-    background-color: $white;
-    border-color: $primary;
-    border-width: 1px;
-    border-style: solid;
-    padding: 5px 15px;
-    font-weight: 500;
-  }
+  color: $text-primary;
+  background-color: $white;
+  border-color: $primary;
+  border-width: 1px;
+  border-style: solid;
+  padding: 5px 15px;
+  font-weight: 500;
+}
 
-  .text-muted{
-    color: $text-muted;
-  }
+.text-muted {
+  color: $text-muted;
+}
 
-  .bg-primary{
-    background-color: $primary;
-  }
+.bg-primary {
+  background-color: $primary;
+}
