@@ -8,6 +8,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const listData = [
     job: "Web Developer",
     location: "Bandung",
     skills: ["PHP", "JavaScript", "CSS"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 4,
@@ -32,6 +35,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 6,
@@ -48,6 +53,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 7,
@@ -56,6 +62,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 8,
@@ -64,6 +71,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 9,
@@ -72,6 +80,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 10,
@@ -80,6 +89,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 11,
@@ -88,6 +98,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 12,
@@ -96,6 +107,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 13,
@@ -104,6 +116,7 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
   {
     id: 14,
@@ -112,11 +125,20 @@ const listData = [
     job: "Web Developer",
     location: "Jakarta",
     skills: ["PHP", "JavaScript", "HTML"],
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
   },
 ];
 
 export default function handler(req, res) {
-  res
-    .status(200)
-    .json({ status: true, message: "Get data success", data: listData });
+  if (req.query.id) {
+    res.status(200).json({
+      status: true,
+      message: "Get data success",
+      data: listData?.find((item) => item?.id === parseInt(req.query.id)),
+    });
+  } else {
+    res
+      .status(200)
+      .json({ status: true, message: "Get data success", data: listData });
+  }
 }

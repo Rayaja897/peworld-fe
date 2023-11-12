@@ -3,9 +3,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import axios from "axios";
-import next from "next";
+import { useRouter } from "next/router";
 
 function TalentList(props) {
+  const router = useRouter();
   const [listData, setListData] = React.useState(props?.data?.slice(0, 4));
   const [currentPage, setCurrentPage] = React.useState(1);
   const countData = Math.round(props?.data?.length / 4);
@@ -42,7 +43,7 @@ function TalentList(props) {
           {/* search bar */}
           <div className="flex justify-between p-[15px] bg-[#fff] drop-shadow-xl gap-[20px] rounded-lg">
             <input
-              placeholder="Search for any skill"
+              placeholder="Search for any Skills"
               className="w-full focus:ring-0"
             />
             <button className="btn-primary btn-lg rounded">Search</button>
@@ -92,7 +93,7 @@ function TalentList(props) {
                   </div>
                 </div>
                 <div>
-                  <button className="btn-primary btn-lg rounded mr-[30px]">
+                  <button className="btn-primary btn-lg rounded mr-[30px]" onClick={() => router.push(`/talent-list/detail/${item?.id}`)}>
                     Lihat Profile
                   </button>
                 </div>
