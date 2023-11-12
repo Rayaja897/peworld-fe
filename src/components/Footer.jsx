@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       {/* footer */}
-      <footer className="bg-primary mt-[100px] py-[50px]">
+      <footer className="bg-primary py-[50px]">
         <div className="container mx-auto">
           <img
             src="/images/logo-white.svg"

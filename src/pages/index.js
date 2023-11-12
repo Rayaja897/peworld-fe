@@ -8,12 +8,12 @@ export default function Home() {
       <Head>
       <title>Home | Peworld</title>
       </Head>
+
       <header className="container mx-auto">
-        
         <Navbar />
         {/* section page 1*/}
-        <section className="grid grid-cols-2 items-center mt-[80px]">
-          <div>
+        <section className="grid grid-cols-1 md:grid-cols-3 items-center mt-[80px]">
+          <div className="col-span-2">
             <h1 className="mb-[20px]">
               Talenta terbaik negri <br /> untuk perubahan <br /> revolusi 4.0
             </h1>
@@ -106,7 +106,7 @@ export default function Home() {
       {/* end of section 3 */}
 
       {/* CTA */}
-      <section className="container mx-auto flex justify-center mt-[150px]">
+      <section className="container mx-auto flex justify-center my-[150px]">
         <div className="cta-rounded flex justify-between items-center bg-primary w-[80%] h-[220px] px-[40px]">
           <h2 className="text-[#fff]">
             Tingkatkan kinerja perusahaan <br /> dengan talent unggulan
