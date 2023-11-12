@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./index.scss";
+@import "./variables.scss";
+
+h1{
+    font-size: 44px;
+    font-weight: 500;
+    color: $text-dark;
+}
+
+.btn-primary {
+  color: $text-white;
+  background-color: $primary;
+  padding: 5px 15px;
+  font-weight: 500;
+}
+
+.btn-lg {
+    padding: 10px 25px;
+}
+
+.btn-outline-primary {
+    color: $text-primary;
+    background-color: $white;
+    border-color: $primary;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px 15px;
+    font-weight: 500;
+  }
