@@ -1,22 +1,16 @@
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
     <main id="home_page">
+      <Head>
+      <title>Home | Peworld</title>
+      </Head>
       <header className="container mx-auto">
-        {/* navbar */}
-        <nav className="flex justify-between mt-5">
-          <img
-            src="/images/logo-primary.svg"
-            width="127px"
-            height="35px"
-            alt="image"
-          />
-          <div className="flex gap-[10px]">
-            <button className="btn-outline-primary rounded">Masuk</button>
-            <button className="btn-primary rounded">Daftar</button>
-          </div>
-        </nav>
-        {/* end of navbar */}
-
+        
+        <Navbar />
         {/* section page 1*/}
         <section className="grid grid-cols-2 items-center mt-[80px]">
           <div>
@@ -124,34 +118,7 @@ export default function Home() {
       </section>
       {/* end of CTA */}
 
-      {/* footer */}
-      <footer className="bg-primary mt-[100px] py-[50px]">
-        <div className="container mx-auto">
-          <img
-            src="/images/logo-white.svg"
-            alt="logo"
-            width="178px"
-            height="50px"
-            className="mb-[10px]"
-          />
-          <p className="text-[#fff] mb-[50px]">
-            Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. In
-            euismod ipsum et dui <br /> rhoncus auctor.
-          </p>
-
-          <hr />
-
-          <div className="flex justify-between mt-[20px]">
-            <p className="text-[#fff]">2020 Pewworld. All right reserved</p>
-
-            <div className="flex gap-[50px]">
-              <p className="text-[#fff]">Telepon</p>
-              <p className="text-[#fff]">Email</p>
-            </div>
-          </div>
-        </div>
-      </footer>
-      {/* end of footer */}
+      <Footer />
     </main>
   );
 }
