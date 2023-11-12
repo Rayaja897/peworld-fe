@@ -15,7 +15,7 @@ export default function Home() {
             <button className="btn-primary rounded">Daftar</button>
           </div>
         </nav>
-        {/* endof navbar */}
+        {/* end of navbar */}
 
         {/* section page 1*/}
         <section className="grid grid-cols-2 items-center mt-[80px]">
@@ -39,7 +39,7 @@ export default function Home() {
             alt="banner"
           />
         </section>
-        {/* endof section 1*/}
+        {/* end of section 1*/}
       </header>
 
       {/* section page 2 */}
@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* endof section 2 */}
+      {/* end of section 2 */}
 
       {/* section page 3 */}
       <section className="container mx-auto">
@@ -81,12 +81,7 @@ export default function Home() {
 
             <div className="grid grid-cols-2 mt-[50px]">
               <div>
-                {[
-                  "Java",
-                  "Kotlin",
-                  "PHP",
-                  "JavaScript",
-                ]?.map((item, key) => (
+                {["Java", "Kotlin", "PHP", "JavaScript"]?.map((item, key) => (
                   <div
                     className="flex align-center gap-[10px] mb-[20px]"
                     key={key}
@@ -97,34 +92,38 @@ export default function Home() {
                 ))}
               </div>
               <div>
-                {[
-                  "Golang",
-                  "C++",
-                  "Ruby",
-                  "10+ Bahasa lainnya",
-                ]?.map((item, key) => (
-                  <div
-                    className="flex align-center gap-[10px] mb-[20px]"
-                    key={key}
-                  >
-                    <img src="/images/rounded-check-warning.svg" alt="icon" />
-                    <p className="text-muted">{item}</p>
-                  </div>
-                ))}
+                {["Golang", "C++", "Ruby", "10+ Bahasa lainnya"]?.map(
+                  (item, key) => (
+                    <div
+                      className="flex align-center gap-[10px] mb-[20px]"
+                      key={key}
+                    >
+                      <img src="/images/rounded-check-warning.svg" alt="icon" />
+                      <p className="text-muted">{item}</p>
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </div>
           <img src="/images/home-banner-3.png" alt="banner" />
         </div>
       </section>
-      {/* endof section 3 */}
+      {/* end of section 3 */}
 
       {/* CTA */}
-      <section className="container mx-auto">
-        <div>
+      <section className="container mx-auto flex justify-center mt-[150px]">
+        <div className="cta-rounded flex justify-between items-center bg-primary w-[80%] h-[220px] px-[40px]">
+          <h2 className="text-[#fff]">
+            Tingkatkan kinerja perusahaan <br /> dengan talent unggulan
+          </h2>
+          <button className="btn-white btn-lg rounded">Mulai Dari Sekarang</button>
         </div>
       </section>
-      {/* endof CTA */}
+      {/* end of CTA */}
+
+      {/* footer */}
+      {/* end of footer */}
     </main>
   );
 }

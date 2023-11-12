@@ -23,6 +23,13 @@ h2{
   font-weight: 500;
 }
 
+.btn-white {
+    color: $primary;
+    background-color: #fff;
+    padding: 5px 15px;
+    font-weight: 500;
+  }
+
 .btn-lg {
     padding: 10px 25px;
 }
@@ -39,4 +46,8 @@ h2{
 
   .text-muted{
     color: $text-muted;
+  }
+
+  .bg-primary{
+    background-color: $primary;
   }
