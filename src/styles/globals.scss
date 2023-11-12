@@ -10,6 +10,12 @@ h1{
     color: $text-dark;
 }
 
+h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: $text-dark;
+}
+
 .btn-primary {
   color: $text-white;
   background-color: $primary;
@@ -29,4 +35,8 @@ h1{
     border-style: solid;
     padding: 5px 15px;
     font-weight: 500;
+  }
+
+  .text-muted{
+    color: $text-muted;
   }
