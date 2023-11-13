@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -111,9 +112,11 @@ export default function Home() {
           <h2 className="text-[#fff]">
             Tingkatkan kinerja perusahaan <br /> dengan talent unggulan
           </h2>
+          <Link href='/talent-list'>
           <button className="btn-white btn-lg rounded">
             Mulai Dari Sekarang
           </button>
+          </Link>
         </div>
       </section>
       {/* end of CTA */}
