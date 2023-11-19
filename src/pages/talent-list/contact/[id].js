@@ -7,6 +7,28 @@ import { getCookie } from "cookies-next";
 
 function contactPage(props) {
   const { data } = props;
+  const token = getCookie("token");
+  const [subject, setSubject] = React.useState("");
+  const [senderName, setSenderName] = React.useState("");
+  const [desc, setDesc] = React.useState("");
+  const [successMsg, setSuccessMsg] = React.useState("");
+
+  const handleSend = () => {
+    axios
+      .post(
+        "https://hire-job.onrender.com/v1/contact",
+        {
+          subject: subject,
+          description: desc,
+          sender: senderName,
+          toName: data?.fullname,
+          to: data?.socmed?.email,
+        },
+        { headers: { Authorization: `Bearer ${token}` } }
+      )
+      .then(() => setSuccessMsg("Email success sended to user"));
+  };
+
   return (
     <>
       <Head>
@@ -38,7 +60,7 @@ function contactPage(props) {
               </div>
 
               <p className="text-[#9EA0A5] text-[14px] mb-[20px]">
-              {data?.desc}
+                {data?.desc}
               </p>
 
               <h2 className="text-[22px] mb-[20px]">Skills</h2>
@@ -55,11 +77,19 @@ function contactPage(props) {
               </div>
             </div>
             <div className="w-[100%] col-span-2 pr-[100px] pl-[50px]">
-              <h2 className="text-[32px] mb-[10px]">Hubungi {data?.fullname}</h2>
+              <h2 className="text-[32px] mb-[10px]">
+                Hubungi {data?.fullname}
+              </h2>
               <p className="text-[18px] text-[#46505C] font-normal mb-[40px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 euismod ipsum et dui rhoncus auctor.
               </p>
+
+              {successMsg ? (
+                <div className="bg-[#d1e7dd] text-[#0f5132] p-4 rounded-lg w-[95%] mb-[30px]">
+                  {successMsg}
+                </div>
+              ) : null}
 
               <label
                 htmlFor="tujuan"
@@ -72,6 +102,7 @@ function contactPage(props) {
                 className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
                 placeholder="Masukan tujuan tentang pesan ini"
                 type="text"
+                onChange={(e) => setSubject(e.target.value)}
               />
 
               <label
@@ -85,32 +116,7 @@ function contactPage(props) {
                 className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
                 placeholder="Masukan nama lengkap"
                 type="text"
-              />
-
-              <label
-                htmlFor="Email"
-                className="block text-[#9EA0A5] text-[16px] mb-[5px]"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
-                placeholder="Masukkan alamat email"
-                type="email"
-              />
-
-              <label
-                htmlFor="no_phone"
-                className="block text-[#9EA0A5] text-[16px] mb-[5px]"
-              >
-                No Handphone
-              </label>
-              <input
-                id="no_phone"
-                className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
-                placeholder="Masukan no handphone"
-                type="text"
+                onChange={(e) => setSenderName(e.target.value)}
               />
 
               <label
@@ -124,10 +130,14 @@ function contactPage(props) {
                 className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
                 placeholder="Deskripsikan/jelaskan lebih detail "
                 rows={5}
+                onChange={(e) => setDesc(e.target.value)}
               />
 
-              <button className="w-[95%] p-3 rounded-lg bg-[#FBB017] text-[#fff] font-medium mt-[20px]">
-                Masuk
+              <button
+                className="w-[95%] p-3 rounded-lg bg-[#FBB017] text-[#fff] font-medium mt-[20px]"
+                onClick={handleSend}
+              >
+                Kirim
               </button>
             </div>
           </div>

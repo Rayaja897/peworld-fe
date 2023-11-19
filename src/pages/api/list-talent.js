@@ -24,7 +24,7 @@ const listData = [
     location: "Subang",
     skills: ["PHP", "JavaScript", "HTML", "CSS"],
     socmed: {
-      email: "fadlysyah@gmail.com",
+      email: "rayhangt89@gmail.com",
       instagram: "@Fadly81",
       github: "@Fadlysyah",
       gitlab: "@Fadlysyah81",
