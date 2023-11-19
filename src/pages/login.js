@@ -1,7 +1,40 @@
 import React from "react";
 import Link from "next/link";
+import { setCookie } from "cookies-next";
+import axios from "axios";
 
 function Login() {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [errMsg, setErrMsg] = React.useState(null);
+
+  const handleLogin = () => {
+    setIsLoading(true);
+    axios
+      .post("https://hire-job.onrender.com/v1/auth/login", {
+        email,
+        password,
+      })
+      .then((result) => {
+        setCookie("token", result?.data?.data?.token);
+        setCookie("user", JSON.stringify(result?.data?.data?.user));
+
+        window.location.href = "/"
+      })
+      .catch((err) => {
+        const { email, password } = err?.response?.data?.messages ?? {};
+
+        setErrMsg(
+          email?.message ??
+            password?.message ??
+            err?.response?.data?.messages ??
+            "Something wrong in our app, try again later."
+        );
+      })
+      .finally(() => setIsLoading(false));
+  };
+
   return (
     <div className="grid grid-cols-4">
       <div className="col-span-2 relative">
@@ -33,6 +66,12 @@ function Login() {
             ipsum et dui rhoncus auctor.
           </p>
 
+          {errMsg ? (
+            <div className="bg-[#f8d7da] text-[#721c24] p-4 rounded-lg w-[95%] mb-[30px]">
+              {errMsg}
+            </div>
+          ) : null}
+
           <label
             htmlFor="Email"
             className="block text-[#9EA0A5] text-[16px] mb-[5px]"
@@ -44,6 +83,7 @@ function Login() {
             className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
             placeholder="Masukkan alamat email"
             type="email"
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           <label
@@ -57,6 +97,7 @@ function Login() {
             className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED]"
             placeholder="Masukkan kata sandi"
             type="password"
+            onChange={(e) => setPassword(e.target.value)}
           />
 
           <Link href="#">
@@ -65,8 +106,12 @@ function Login() {
             </p>
           </Link>
 
-          <button className="w-[95%] p-3 rounded-lg bg-[#FBB017] text-[#fff] font-medium mt-[20px]">
-            Masuk
+          <button
+            className="w-[95%] p-3 rounded-lg bg-[#FBB017] text-[#fff] font-medium mt-[20px]"
+            onClick={handleLogin}
+            disabled={isLoading}
+          >
+            {isLoading ? "Loading..." : "Masuk"}
           </button>
 
           <p className="text-center mt-[20px]">

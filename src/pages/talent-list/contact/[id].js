@@ -2,8 +2,10 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import axios from "axios";
 
-function contactPage() {
+function contactPage(props) {
+  const { data } = props;
   return (
     <>
       <Head>
@@ -26,26 +28,22 @@ function contactPage() {
                 />
               </div>
 
-              <h1 className="text-[22px]">Louis Tomlinson</h1>
-              <p className="text-[14px]">Job Name</p>
+              <h1 className="text-[22px]">{data?.fullname}</h1>
+              <p className="text-[14px]">{data?.job}</p>
 
               <div className="flex gap-[10px] mb-[20px] mt-[10px]">
                 <img src="/images/icon-location.svg" alt="icon" />
-                <p className="text-[#9EA0A5] text-[14px]">
-                  Purwokerto, Jawa Tengah
-                </p>
+                <p className="text-[#9EA0A5] text-[14px]">{data?.location}</p>
               </div>
 
               <p className="text-[#9EA0A5] text-[14px] mb-[20px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum erat orci, mollis nec gravida sed, ornare quis urna.
-                Curabitur eu lacus fringilla, vestibulum risus at.
+              {data?.desc}
               </p>
 
               <h2 className="text-[22px] mb-[20px]">Skills</h2>
 
               <div className="w-[300px] flex flex-wrap gap-[10px]">
-                {["Phyton", "Laravel", "GO", "C++"].map((item, key) => (
+                {data?.skills?.map((item, key) => (
                   <div
                     className="bg-[#FBB01799] border-2 border-[#FBB017] py-1 px-5 rounded"
                     key={key}
@@ -56,7 +54,7 @@ function contactPage() {
               </div>
             </div>
             <div className="w-[100%] col-span-2 pr-[100px] pl-[50px]">
-              <h2 className="text-[32px] mb-[10px]">Hubungi Lous Tomlinson</h2>
+              <h2 className="text-[32px] mb-[10px]">Hubungi {data?.fullname}</h2>
               <p className="text-[18px] text-[#46505C] font-normal mb-[40px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 euismod ipsum et dui rhoncus auctor.
@@ -138,6 +136,19 @@ function contactPage() {
       <Footer />
     </>
   );
+}
+
+// change to ssr page
+export async function getServerSideProps(props) {
+  const { id } = props.params;
+
+  const request = await axios.get(
+    `http://localhost:3000/api/list-talent?id=${id}`
+  );
+
+  return {
+    props: request.data,
+  };
 }
 
 export default contactPage;

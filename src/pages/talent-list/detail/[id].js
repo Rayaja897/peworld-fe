@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import axios from "axios";
+import Link from "next/link";
 
 function Detail(props) {
   const { data } = props;
@@ -40,9 +41,11 @@ function Detail(props) {
               </div>
             </div>
             <div className="flex justify-center">
+              <Link href={`/talent-list/contact/${data?.id}`}>
               <button className="btn-primary btn-lg rounded w-[300px] mb-[50px]">
                 Hire
               </button>
+              </Link>
             </div>
             <h2 className="text-center text-[22px] mb-[20px]">Skill</h2>
             <div className="flex justify-center pb-[50px]">
