@@ -4,7 +4,13 @@ import { getCookie } from "cookies-next";
 
 function Navbar() {
   const router = useRouter();
-  const user = getCookie("user") ? JSON.parse(getCookie("user")) : {};
+  const [user, setUser] = React.useState(null);
+
+  React.useEffect(() => {
+    if (getCookie("user")) {
+      setUser(JSON.parse(getCookie("user")));
+    }
+  }, []);
 
   return (
     <>
@@ -17,13 +23,7 @@ function Navbar() {
           alt="image"
         />
         {user ? (
-          <img
-            src={
-              user?.photo ?? "https://www.w3schools.com/w3images/avatar5.png"
-            }
-            width="50px"
-            className="rounded-full"
-          />
+          <img src={user?.photo} width="50px" className="rounded-full" />
         ) : (
           <div className="flex gap-[10px]">
             <button

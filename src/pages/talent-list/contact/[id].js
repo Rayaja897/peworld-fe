@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import axios from "axios";
+import { getCookie } from "cookies-next";
 
 function contactPage(props) {
   const { data } = props;
@@ -139,8 +140,19 @@ function contactPage(props) {
 }
 
 // change to ssr page
-export async function getServerSideProps(props) {
-  const { id } = props.params;
+export async function getServerSideProps({ req, res, params }) {
+  const { id } = params;
+  const user = getCookie("user", { req, res });
+  const token = getCookie("token", { req, res });
+
+  if (!user && !token) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: `/talent-list/detail/${id}`,
+      },
+    };
+  }
 
   const request = await axios.get(
     `http://localhost:3000/api/list-talent?id=${id}`
