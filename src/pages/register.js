@@ -124,12 +124,6 @@ function Register() {
             type="password"
           />
 
-          <Link href="#">
-            <p className="text-right block mr-[5%] mt-[20px]">
-              Lupa kata sandi?
-            </p>
-          </Link>
-
           <button className="w-[95%] p-3 rounded-lg bg-[#FBB017] text-[#fff] font-medium mt-[20px]">
             Masuk
           </button>
