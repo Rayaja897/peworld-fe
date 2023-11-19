@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main id="home_page">
       <Head>
-      <title>Home | Peworld</title>
+        <title>Home | Peworld</title>
       </Head>
 
       <header className="container mx-auto">
@@ -22,9 +22,11 @@ export default function Home() {
               Temukan talenta terbaik yang cocok dengan perusahaan anda <br />
               dari banyaknya talenta di seluruh indonesia.
             </p>
-            <button className="btn-primary btn-lg rounded">
-              Mulai Dari Sekarang
-            </button>
+            <Link href="/talent-list">
+              <button className="btn-primary btn-lg rounded">
+                Mulai Dari Sekarang
+              </button>
+            </Link>
           </div>
 
           <img
@@ -112,10 +114,10 @@ export default function Home() {
           <h2 className="text-[#fff]">
             Tingkatkan kinerja perusahaan <br /> dengan talent unggulan
           </h2>
-          <Link href='/talent-list'>
-          <button className="btn-white btn-lg rounded">
-            Mulai Dari Sekarang
-          </button>
+          <Link href="/talent-list">
+            <button className="btn-white btn-lg rounded">
+              Mulai Dari Sekarang
+            </button>
           </Link>
         </div>
       </section>
@@ -124,4 +126,11 @@ export default function Home() {
       <Footer />
     </main>
   );
+}
+
+// ini untuk mengubah halaman menjadi static html
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
 }
