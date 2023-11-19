@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { setCookie } from "cookies-next";
+import { setCookie, getCookie } from "cookies-next";
 import axios from "axios";
 
 function Login() {
@@ -17,10 +17,13 @@ function Login() {
         password,
       })
       .then((result) => {
-        setCookie("token", result?.data?.data?.token);
-        setCookie("user", JSON.stringify(result?.data?.data?.user));
+        setCookie("token", result?.data?.data?.token, { maxAge: 60 * 6 * 24 });
+        setCookie(
+          "user",
+          JSON.stringify(result?.data?.data?.user, { maxAge: 60 * 6 * 24 })
+        );
 
-        window.location.href = "/"
+        window.location.href = "/";
       })
       .catch((err) => {
         const { email, password } = err?.response?.data?.messages ?? {};
@@ -124,6 +127,25 @@ function Login() {
       </div>
     </div>
   );
+}
+
+// ini untuk mengubah halaman menjadi static html
+export async function getServerSideProps({ req, res }) {
+  const user = getCookie("user", { req, res });
+  const token = getCookie("token", { req, res });
+
+  if (user && token) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/",
+      },
+    };
+  }
+
+  return {
+    props: {},
+  };
 }
 
 export default Login;
