@@ -1,10 +1,19 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { getCookie } from "cookies-next";
+import { getCookie, deleteCookie } from "cookies-next";
 
 function Navbar() {
   const router = useRouter();
   const [user, setUser] = React.useState(null);
+
+  const handleLogout = () => {
+    deleteCookie("user", {
+      path: "",
+    });
+    deleteCookie("token", {
+      path: "",
+    });
+  };
 
   React.useEffect(() => {
     if (getCookie("user")) {
@@ -23,7 +32,12 @@ function Navbar() {
           alt="image"
         />
         {user ? (
-          <img src={user?.photo} width="50px" className="rounded-full" />
+          <div className="flex gap-[20px]">
+            <button className="btn-primary rounded" onClick={handleLogout}>
+              Log Out
+            </button>
+            <img src={user?.photo} width="50px" className="rounded-full" />
+          </div>
         ) : (
           <div className="flex gap-[10px]">
             <button

@@ -8,11 +8,15 @@ import { useRouter } from "next/router";
 function TalentList(props) {
   const router = useRouter();
   const [listData, setListData] = React.useState(props?.data?.slice(0, 4));
-  const [currentPage, setCurrentPage] = React.useState(1);
+  const [currentPage, setCurrentPage] = React.useState(
+    parseInt(router?.query?.page ?? 1)
+  );
   const countData = Math.round(props?.data?.length / 4);
 
   const handlePagination = (nextPage) => {
     setCurrentPage(nextPage);
+
+    router.push(`/talent-list?page=${nextPage}`);
 
     if (nextPage > 1) {
       setListData(props?.data?.slice(4 * (nextPage - 1), 4 * nextPage));
@@ -93,7 +97,12 @@ function TalentList(props) {
                   </div>
                 </div>
                 <div>
-                  <button className="btn-primary btn-lg rounded mr-[30px]" onClick={() => router.push(`/talent-list/detail/${item?.id}`)}>
+                  <button
+                    className="btn-primary btn-lg rounded mr-[30px]"
+                    onClick={() =>
+                      router.push(`/talent-list/detail/${item?.id}`)
+                    }
+                  >
                     Lihat Profile
                   </button>
                 </div>
