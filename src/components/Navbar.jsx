@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { getCookie, deleteCookie } from "cookies-next";
+import Link from "next/link";
 
 function Navbar() {
   const router = useRouter();
@@ -25,12 +26,14 @@ function Navbar() {
     <>
       {/* navbar */}
       <nav className="flex justify-between mt-5">
-        <img
-          src="/images/logo-primary.svg"
-          width="127px"
-          height="35px"
-          alt="image"
-        />
+        <Link href="/">
+          <img
+            src="/images/logo-primary.svg"
+            width="127px"
+            height="35px"
+            alt="image"
+          />
+        </Link>
         {user ? (
           <div className="flex gap-[20px]">
             <button className="btn-primary rounded" onClick={handleLogout}>

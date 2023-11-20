@@ -44,7 +44,7 @@ function contactPage(props) {
             <div className="w-[90%] h-[600px] p-[30px] bg-[#FFFFFF] rounded-lg drop-shadow-md">
               <div className="flex justify-center mt-[25px] mb-[35px]">
                 <img
-                  src="https://i.pravatar.cc/150?img=3"
+                  src={data?.photo}
                   className="rounded-full"
                   width="150px"
                   height="150px"
