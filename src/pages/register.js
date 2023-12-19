@@ -1,7 +1,43 @@
 import React from "react";
 import Link from "next/link";
+import axios from "axios";
 
 function Register() {
+  const [fullName, setFullName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [company, setCompany] = React.useState("");
+  const [jobTitle, setJobTitle] = React.useState("");
+  const [noPhone, setNoPhone] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [errMsg, setErrMsg] = React.useState(null);
+  const [successMsg, setSuccessMsg] = React.useState(false);
+
+  const handleRegist = () => {
+    setIsLoading(true);
+    axios
+      .post("https://hire-job.onrender.com/v1/auth/register", {
+        email: email,
+        password: password,
+        fullName: fullName,
+        company: company,
+        jobTitle: jobTitle,
+        noPhone: noPhone,
+      })
+      .then(() => {
+        setSuccessMsg(true);
+      })
+      .catch((error) => {
+        const errEmail = error?.response?.data?.messages?.email?.message;
+        const errPassword = error?.response?.data?.messages?.password?.message;
+
+        setSuccessMsg(false);
+        setErrMsg(errEmail ?? errPassword ?? "Something wrong in our app");
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
   return (
     <div className="grid grid-cols-4">
       <div className="col-span-2 relative">
@@ -33,6 +69,18 @@ function Register() {
             ipsum et dui rhoncus auctor.
           </p>
 
+          {successMsg ? (
+            <div className="bg-[#d1e7dd] text-[#0f5132] p-4 rounded-lg w-[95%] mb-[30px]">
+              {successMsg}
+            </div>
+          ) : null}
+
+          {errMsg ? (
+            <div className="bg-[#f8d7da] text-[#721c24] p-4 rounded-lg w-[95%] mb-[30px]">
+              {errMsg}
+            </div>
+          ) : null}
+
           <label
             htmlFor="name"
             className="block text-[#9EA0A5] text-[16px] mb-[5px]"
@@ -44,6 +92,9 @@ function Register() {
             className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
             placeholder="Masukan nama lengkap"
             type="text"
+            onChange={(event) => {
+              setFullName(event.target.value);
+            }}
           />
 
           <label
@@ -57,6 +108,9 @@ function Register() {
             className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
             placeholder="Masukkan alamat email"
             type="email"
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
           />
 
           <label
@@ -70,6 +124,9 @@ function Register() {
             className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
             placeholder="Masukan nama perusahaan"
             type="text"
+            onChange={(event) => {
+              setCompany(event.target.value);
+            }}
           />
 
           <label
@@ -83,6 +140,9 @@ function Register() {
             className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
             placeholder="Posisi di perusahaan Anda"
             type="text"
+            onChange={(event) => {
+              setJobTitle(event.target.value);
+            }}
           />
 
           <label
@@ -96,6 +156,9 @@ function Register() {
             className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
             placeholder="Masukan no handphone"
             type="text"
+            onChange={(event) => {
+              setNoPhone(event.target.value);
+            }}
           />
 
           <label
@@ -109,6 +172,9 @@ function Register() {
             className="w-[95%] p-3 rounded-lg border border-2 border-solid border-[#E2E5ED] mb-[30px]"
             placeholder="Masukkan kata sandi"
             type="password"
+            onChange={(event) => {
+              setPassword(event.target.value);
+            }}
           />
 
           <label
@@ -124,7 +190,11 @@ function Register() {
             type="password"
           />
 
-          <button className="w-[95%] p-3 rounded-lg bg-[#FBB017] text-[#fff] font-medium mt-[20px]">
+          <button
+            className="w-[95%] p-3 rounded-lg bg-[#FBB017] text-[#fff] font-medium mt-[20px]"
+            onClick={handleRegist}
+            disabled={isLoading}
+          >
             Masuk
           </button>
 
@@ -138,6 +208,13 @@ function Register() {
       </div>
     </div>
   );
+}
+
+// ini untuk mengubah halaman menjadi static html
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
 }
 
 export default Register;
