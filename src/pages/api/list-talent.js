@@ -14,7 +14,7 @@ const listData = [
       github: "@Louistommo",
       gitlab: "@Louistommo91",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const listData = [
       github: "@Fadlysyah",
       gitlab: "@Fadlysyah81",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const listData = [
       github: "@Indra7",
       gitlab: "@Indra7",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 4,
@@ -59,7 +59,7 @@ const listData = [
       github: "@RoisAddin41",
       gitlab: "@RoisAddin41",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 5,
@@ -74,7 +74,7 @@ const listData = [
       github: "@Sulaeman7",
       gitlab: "@Sulaeman77",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 6,
@@ -89,7 +89,7 @@ const listData = [
       github: "@KuhSetya5",
       gitlab: "@KuhSetya5",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 7,
@@ -104,7 +104,7 @@ const listData = [
       github: "@Naufal2",
       gitlab: "@Naufal2",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 8,
@@ -119,7 +119,7 @@ const listData = [
       github: "@Tegaraja",
       gitlab: "@Tegaraja",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 9,
@@ -134,7 +134,7 @@ const listData = [
       github: "@Devandra",
       gitlab: "@Devandra4",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 10,
@@ -149,7 +149,7 @@ const listData = [
       github: "@rizkyfad7",
       gitlab: "@rizkyfad7",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 11,
@@ -164,7 +164,7 @@ const listData = [
       github: "@KhalilQais",
       gitlab: "@KhalilQais",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 12,
@@ -179,7 +179,7 @@ const listData = [
       github: "@Alfian6",
       gitlab: "@Alfian6",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 13,
@@ -194,7 +194,7 @@ const listData = [
       github: "@Cahya9",
       gitlab: "@Cahya9",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 14,
@@ -209,7 +209,7 @@ const listData = [
       github: "@Johaniskandar3",
       gitlab: "@Johaniskandar3",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
   {
     id: 15,
@@ -224,7 +224,7 @@ const listData = [
       github: "@DediKusnaedi",
       gitlab: "@DediKusnaedi7",
     },
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.",
+    desc: "Enthusiastic and detail-oriented web developer with a robust proficiency in both front-end and back-end technologies. Experienced in transforming design concepts into fully functional websites, prioritizing a seamless user experience.",
   },
 ];
 

@@ -14,14 +14,13 @@ function Footer() {
             className="mb-[10px]"
           />
           <p className="text-[#fff] mb-[50px]">
-            Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. In
-            euismod ipsum et dui <br /> rhoncus auctor.
+          Temukan Bakat, Wujudkan Impian Anda. Kunci Kesuksesan Anda Ada Di Sini!
           </p>
 
           <hr />
 
           <div className="flex justify-between mt-[20px]">
-            <p className="text-[#fff]">2020 Pewworld. All right reserved</p>
+            <p className="text-[#fff]">2023 Peworld. All right reserved</p>
 
             <div className="flex gap-[50px]">
               <p className="text-[#fff]">Telepon</p>

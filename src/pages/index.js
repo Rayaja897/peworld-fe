@@ -50,11 +50,10 @@ export default function Home() {
             </h2>
 
             {[
-              "Lorem ipsum dolor sit amet.",
-              "Lorem ipsum dolor sit amet.",
-              "Lorem ipsum dolor sit amet.",
-              "Lorem ipsum dolor sit amet.",
-              "Lorem ipsum dolor sit amet.",
+              "Temukan bakat terbaik dengan cepat.",
+              "Pastikan kebutuhan perusahaan dan keahlian unik dari para kandidat.",
+              "Tinjauan lengkap tentang para kandidat beserta portofolio interaktif mereka.",
+              "Prioritaskan keamanan data kandidat dan perusahaan dengan sistem keamanan tinggi."
             ]?.map((item, key) => (
               <div className="flex align-center gap-[10px] mb-[20px]" key={key}>
                 <img src="/images/rounded-check-primary.svg" alt="icon" />

@@ -58,10 +58,11 @@ function contactPage(props) {
                 <img src="/images/icon-location.svg" alt="icon" />
                 <p className="text-[#9EA0A5] text-[14px]">{data?.location}</p>
               </div>
-
-              <p className="text-[#9EA0A5] text-[14px] mb-[20px]">
-                {data?.desc}
-              </p>
+              <div>
+                <p className="text-sm font-normal leading-6 my-2 text-justify">
+                  {data?.desc}
+                </p>
+              </div>
 
               <h2 className="text-[22px] mb-[20px]">Skills</h2>
 
@@ -81,8 +82,8 @@ function contactPage(props) {
                 Hubungi {data?.fullname}
               </h2>
               <p className="text-[18px] text-[#46505C] font-normal mb-[40px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                euismod ipsum et dui rhoncus auctor.
+                Silakan lengkapi semua kolom di bawah ini untuk menghubungi
+                bakat yang ingin Anda rekrut.
               </p>
 
               {successMsg ? (
