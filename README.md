@@ -57,7 +57,7 @@ password: test1234
 | :------------------------------------------------: | :-----------------------------------------------------: | :-----------------------------------------------: |
 | ![Homepage](https://i.ibb.co/9wMPkB9/localhost-3000.png) | ![Register Page](https://i.ibb.co/fvypjxh/register.png) | ![Login Page](https://i.ibb.co/hFtJ0w2/login.png) |
 
-|                       Talent List                        | :---------------------------------------------------------------: |
+|                       Talent List                        |
 | ![Talent List](https://i.ibb.co/r5pFL50/talent-list.png) |
 
 |                         Talent Profile                         |                           Talent Contact Form                            |                       Talent Mail                        |
