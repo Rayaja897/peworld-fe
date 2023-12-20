@@ -1,40 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Peworld - Front End
 
-## Getting Started
+<div align="center">
+<a href="https://github.com/Rayaja897/peworld-fe">
+    <img src="https://i.ibb.co/qdWbF5W/logo.png" alt="Peworld-logo" border="0" style="width: 350">
+</a>
+</div>
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [About Project](#about-project)
+- [Built With](#built-with)
+- [Installation](#installation)
+- [Demo](#demo)
+- [Screenshot project](#screenshot-project)
+- [Contact](#contact)
+- [Related Project](#related-project)
+
+## About Project
+
+Peworld is a dedicated platform designed for recruiters seeking top-tier talent to join their companies. Our website provides a seamless experience for recruiters to discover and connect with skilled professionals who are ready to contribute to their organizations. Whether you're in search of experienced individuals or rising stars in various industries, Peworld streamlines the recruitment process, making it easier than ever to find the perfect match for your company's needs. Join Peworld today and unlock a world of talent to elevate your team and drive success.
+
+## Built with
+
+- [**Axios 1.6.1**](https://www.npmjs.com/package/axios)
+- [**Cookies Next 4.1.0**](https://www.npmjs.com/package/cookies-next)
+- [**Next 14.0.1**](https://nextjs.org/docs/getting-started/installation)
+- [**React 18**](https://react.dev/learn/start-a-new-react-project)
+- [**React DOM 18**](https://www.npmjs.com/package/react-dom)
+- [**Sass 1.69.5**](https://sass-lang.com/install/)
+- [**Tailwind CSS 3.3.0**](https://tailwindui.com/documentation#react-installing-dependencies)
+
+## Installation
+
+Because Peworld is an open source project, you can also run Peworld on your localhost. clone this repository and open it using your favorite code editor, and run the terminal like this:
+
+```
+Git clone https://github.com/yongkisatrias/peworld-fe.git
+npm i
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+coming-soon
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+if you want to login, without register:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+email: hedaw96894@aseall.com
+password: test1234
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Screenshot Project
 
-## Learn More
+|                      Homepage                      |                      Register Page                      |                    Login Page                     |
+| :------------------------------------------------: | :-----------------------------------------------------: | :-----------------------------------------------: |
+| ![Homepage](https://i.ibb.co/9wMPkB9/localhost-3000.png) | ![Register Page](https://i.ibb.co/fvypjxh/register.png) | ![Login Page](https://i.ibb.co/hFtJ0w2/login.png) |
 
-To learn more about Next.js, take a look at the following resources:
+|                       Talent List                        | :---------------------------------------------------------------: |
+| ![Talent List](https://i.ibb.co/r5pFL50/talent-list.png) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+|                         Talent Profile                         |                           Talent Contact Form                            |                       Talent Mail                        |
+| :------------------------------------------------------------: | :----------------------------------------------------------------------: | :------------------------------------------------------: |
+| ![Talent Profile](https://i.ibb.co/dK1CmZ1/localhost-3000-1.png) | ![Talent Contact Form](https://i.ibb.co/qFLkkdZ/localhost-3000-2.png) | ![Talent Mail](https://i.ibb.co/gDqz4tC/talent-mail.png) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
+You can reach me on:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sayarayhanilham@gmail.com)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rayhan-ilham)
+[![github](https://img.shields.io/badge/Github-232b2b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rayaja897)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I know this project is not perfect, please understand if data occasionally fails to appear or requires a second click, as we are using free-tier deployment for both the front-end and back-end services. Thank you 😊
+
+Contributions are the cornerstone of the open source community, turning it into a remarkable space for learning, inspiring, and innovating. Your contributions are **highly valued**.
+
+```
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b your/branch`)
+3. Commit your Changes (`git commit -m 'Add amazing feature'`)
+4. Push to the Branch (`git push origin feature/yourbranch`)
+5. Open a Pull Request
+```
+
+## Related Project
+
+🚀 [`Demo Peworld`]()
+
+🚀 [`Peworld Backend`](https://hire-job.onrender.com/)
