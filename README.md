@@ -37,7 +37,7 @@ Because Peworld is an open source project, you can also run Peworld on your loca
 ```
 Git clone https://github.com/Rayaja897/peworld-fe.git
 npm i
-npm run start
+npm run dev
 ```
 
 ## Demo
