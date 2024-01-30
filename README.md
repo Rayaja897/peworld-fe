@@ -35,7 +35,7 @@ Peworld is a dedicated platform designed for recruiters seeking top-tier talent 
 Because Peworld is an open source project, you can also run Peworld on your localhost. clone this repository and open it using your favorite code editor, and run the terminal like this:
 
 ```
-Git clone https://github.com/yongkisatrias/peworld-fe.git
+Git clone https://github.com/Rayaja897/peworld-fe.git
 npm i
 npm run start
 ```
